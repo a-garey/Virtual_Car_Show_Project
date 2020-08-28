@@ -9,8 +9,8 @@ using Virtual_Car_Show_Project.Models;
 namespace Virtual_Car_Show_Project.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20200827064341_SecondMigration")]
-    partial class SecondMigration
+    [Migration("20200828175339_FridayMigration")]
+    partial class FridayMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -92,6 +92,9 @@ namespace Virtual_Car_Show_Project.Migrations
                     b.Property<DateTime>("EndDateAndTime")
                         .HasColumnType("datetime(6)");
 
+                    b.Property<decimal>("Fee")
+                        .HasColumnType("decimal(18, 2)");
+
                     b.Property<DateTime>("StartDateAndTime")
                         .HasColumnType("datetime(6)");
 
@@ -159,8 +162,7 @@ namespace Virtual_Car_Show_Project.Migrations
 
                     b.Property<string>("Password")
                         .IsRequired()
-                        .HasColumnType("varchar(45) CHARACTER SET utf8mb4")
-                        .HasMaxLength(45);
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("State")
                         .IsRequired()

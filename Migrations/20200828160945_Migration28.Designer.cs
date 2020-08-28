@@ -9,8 +9,8 @@ using Virtual_Car_Show_Project.Models;
 namespace Virtual_Car_Show_Project.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20200827065210_FirstMigrationAfterDrop")]
-    partial class FirstMigrationAfterDrop
+    [Migration("20200828160945_Migration28")]
+    partial class Migration28
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -91,6 +91,9 @@ namespace Virtual_Car_Show_Project.Migrations
 
                     b.Property<DateTime>("EndDateAndTime")
                         .HasColumnType("datetime(6)");
+
+                    b.Property<decimal>("Fee")
+                        .HasColumnType("decimal(18, 2)");
 
                     b.Property<DateTime>("StartDateAndTime")
                         .HasColumnType("datetime(6)");
